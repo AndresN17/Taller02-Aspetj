@@ -23,7 +23,7 @@ public aspect Logger {
     	DateFormat dtformat= new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
     	String strDate=dtformat.format(date);
     	String transaction="CreateUser";
-    	String logMssg=transaction+" "+strDate;
+    	String logMssg=transaction+" "+strDate+"\n";
     	try(BufferedWriter bf=new BufferedWriter(new FileWriter(file,true))){
 			bf.write(logMssg);
 		}catch(IOException i){
